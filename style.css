@@ -3,19 +3,16 @@
   --drp-menu-height: 3rem;
   --menu-color: pink;
   --menu-hover-color: grey;
+  --item-hover-color: blue;
   --text-alignment: center;
 }
 
 .drp-menu {
   text-align: var(--text-alignment);
-  min-width: var(--drp-menu-width);
+  max-width: var(--drp-menu-width);
   min-height: var(--drp-menu-height);
   background-color: var(--menu-color);
   border: 1px solid black;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; */
 }
 
 .drp-menu > .menu-title {
@@ -27,18 +24,12 @@
 
 .drp-menu > ul {
   text-align: var(--text-alignment);
-  margin: auto;
-}
-
-.drp-menu > *::after {
+  margin: 0 auto;
 }
 
 .drp-menu:hover {
   background-color: var(--menu-hover-color);
   cursor: pointer;
-}
-
-.visible {
 }
 
 .item-list {
@@ -52,4 +43,12 @@
 
 .visible > .item-list {
   display: block;
+}
+
+.menu-item {
+  padding: calc(var(--drp-menu-height) / 8) 0;
+}
+
+.menu-item:hover {
+  background-color: var(--item-hover-color);
 }
